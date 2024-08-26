@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Motus</title>
+    <style>
+      .dot {
+        height: 25px;
+        width: 25px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <input id="word" />
+    <button onclick="guess(base)">Ok</button>
+    <div>
+      <span class="dot">M</span>
+      <span class="dot">O</span>
+      <span class="dot">T</span>
+      <span class="dot">T</span>
+      <span class="dot">U</span>
+      <span class="dot">S</span>
+    </div>
+    <div id="results">
+      <p id="try"></p>
+      <p id="well"></p>
+      <p id="miss"></p>
+      <p id="not"></p>
+      <p id="win"></p>
+    </div>
+  </body>
+</html>
