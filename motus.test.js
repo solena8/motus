@@ -1,17 +1,8 @@
-const { getRandomWord, words} = require('./script');
+const { words } = require("./words.js");
+const { normalizeWord } = require("./scriptAlgo.js");
 
-test('gets a 5 letter word', () => {
-  const word = getRandomWord(words);
-  expect(word.length).toBe(5);
-});
-
-test('gets a string', () => {
-    const word = getRandomWord(words);
-    expect(typeof word).toBe('string');
+describe("normalizeWord", () => {
+  it("should normalize a string with accents and convert to uppercase", () => {
+    expect(normalizeWord("élève")).toBe("ELEVE");
   });
-
-
-  test('is a word from the words array', () => {
-    const word = getRandomWord(words);
-  expect(words).toContain(word);
 });

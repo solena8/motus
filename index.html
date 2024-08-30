@@ -3,34 +3,30 @@
   <head>
     <meta charset="utf-8" />
     <title>Motus</title>
-    <style>
-      .dot {
-        height: 25px;
-        width: 25px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-      }
-    </style>
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="motus.css" />
+    <script src="words.js"></script>
+    <script src="scriptAlgo.js"></script>
+    <script src="scriptDOM.js"></script>
   </head>
   <body>
-    <input id="word" />
-    <button onclick="guess(base)">Ok</button>
-    <div>
-      <span class="dot">M</span>
-      <span class="dot">O</span>
-      <span class="dot">T</span>
-      <span class="dot">T</span>
-      <span class="dot">U</span>
-      <span class="dot">S</span>
-    </div>
-    <div id="results">
-      <p id="try"></p>
-      <p id="well"></p>
-      <p id="miss"></p>
-      <p id="not"></p>
-      <p id="win"></p>
+    <div id="game-container">
+      <div class="subcontainer">
+        <div id="motus">
+          <span id="M">M</span>
+          <span id="O">O</span>
+          <span id="T">T</span>
+          <span id="U">U</span>
+          <span id="S">S</span>
+          <button id="start">Play</button>
+        </div>
+
+        <input id="word" type="text" placeholder="Enter your guess" />
+        <button id="guess">Ok</button>
+        <span id="startLetter"></span>
+        <div id="word-container"></div>
+        <div id="info"></div>
+        <div id="winning-word"></div>
+      </div>
     </div>
   </body>
 </html>

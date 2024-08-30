@@ -1,5 +1,22 @@
 {
-    "scripts": {
-      "test": "jest"
-    }
+  "name": "motus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "motus.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solena8/motus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solena8/motus/issues"
+  },
+  "homepage": "https://github.com/solena8/motus#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
+}

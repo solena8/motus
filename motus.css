@@ -1,10 +1,144 @@
-.dot {
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-  }
+/* General Styles */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Light gray background */
+  font-family: Arial, sans-serif;
+}
 
+#game-container {
+  width: 400px;
+  height: 450px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
 
-  
+/* Input and Button Styles */
+input#word {
+  margin-bottom: 25px;
+  padding: 5px;
+  font-size: 16px;
+  width: 80%;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff46bb;
+  color: white;
+}
+
+button:hover {
+  background-color: #fd68e9;
+}
+
+/* Container and Span Styles */
+.subcontainer {
+  text-align: left;
+  margin-top: 20px;
+}
+
+#word-container,
+#winning-word {
+  min-height: 150px;
+}
+
+/* Common span styles for guesses and winning words */
+span.common-style {
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 45px; /* Ensure text is centered vertically */
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+/* Specific Styles for Guess Spans */
+#word-container span,
+#winning-word span {
+  margin: 1px;
+  font-size: 20px;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  line-height: 25px; /* Ensure text is centered vertically */
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Styles for Letters in #motus */
+#motus span {
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  line-height: 50px; /* Ensure text is centered vertically */
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%; /* Make the background round */
+  margin-bottom: 20px;
+}
+
+/* Specific Letter Styles */
+#M {
+  background-color: #fb2bff;
+}
+
+#O {
+  background-color: #6099fa;
+}
+
+#T {
+  background-color: #59ce2e;
+}
+
+#U {
+  background-color: #ffcc00;
+}
+
+#S {
+  background-color: #ff4d00;
+}
+
+/* Styles for Start Letter */
+#startLetter {
+  background-color: #6099fa;
+  border-radius: 0%;
+  height: 45px;
+  width: 45px;
+  line-height: 45px; /* Ensure text is centered vertically */
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Styles for Clues */
+.well-placed {
+  background-color: #6099fa;
+  border-radius: 0%;
+}
+
+.misplaced {
+  background-color: #ffcc00;
+  border-radius: 50%;
+}
+
+.not-in-word {
+  background-color: #ff4d00;
+  border-radius: 0%;
+}
