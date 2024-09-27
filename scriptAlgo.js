@@ -1,4 +1,4 @@
-import { words } from "./words.js"; // Assuming words.js exports the `words` array
+import { words } from "./words.js";
 
 export function normalizeWord(word) {
   const normWord = word.normalize("NFD").replace(/\p{Diacritic}/gu, "");
@@ -8,7 +8,6 @@ export function normalizeWord(word) {
 
 const rawBase = words[Math.floor(Math.random() * words.length)];
 export const baseWord = normalizeWord(rawBase);
-
 
 export function getClues(base, guess) {
   const arrayBase = base.split("");
