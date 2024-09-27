@@ -1,4 +1,4 @@
-const words = [
+export const words = [
   "abaissa",
   "abattit",
   "abattre",
@@ -3353,4 +3353,3 @@ const words = [
   "zoulous",
 ];
 
-module.exports = { words };

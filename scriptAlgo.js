@@ -1,16 +1,16 @@
-const { words } = require("./words");
+import { words } from "./words.js"; // Assuming words.js exports the `words` array
 
-function normalizeWord(word) {
+export function normalizeWord(word) {
   const normWord = word.normalize("NFD").replace(/\p{Diacritic}/gu, "");
   const upperWord = normWord.toUpperCase();
   return upperWord;
 }
 
 const rawBase = words[Math.floor(Math.random() * words.length)];
-const baseWord = normalizeWord(rawBase);
-let turns = 0;
+export const baseWord = normalizeWord(rawBase);
 
-function getClues(base, guess) {
+
+export function getClues(base, guess) {
   const arrayBase = base.split("");
   const arrayGuess = guess.split("");
   const wellPlaced = [];
@@ -44,5 +44,3 @@ function getClues(base, guess) {
     alert(`Le mot doit être composé de ${base.length} lettres`);
   }
 }
-
-module.exports = { normalizeWord };

@@ -1,3 +1,7 @@
+import { getClues, normalizeWord, baseWord } from "./scriptAlgo.js";
+
+let turns = 0;
+
 function startGame(base) {
   const startLetter = document.getElementById("startLetter");
   startLetter.innerText = base[0];
@@ -9,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("guess").addEventListener("click", function () {
-    const rawWord = document.getElementById("word").value; 
-    const guessWord = normalizeWord(rawWord); 
+    const rawWord = document.getElementById("word").value;
+    const guessWord = normalizeWord(rawWord);
     game(baseWord, guessWord);
   });
 });
@@ -20,7 +24,7 @@ function makeAGuess(base, guess) {
   const wordContainer = document.getElementById("word-container");
   let startLettervar = document.getElementById("startLetter");
   if (startLettervar) {
-    startLetter.remove();
+    startLettervar.remove();
   }
   for (let i = 0; i < result.guess.length; i++) {
     const char = result.guess[i];
@@ -65,15 +69,16 @@ function win(base, guess) {
 }
 
 function game(base, guess) {
-  if (!win(base, guess)) {
-    if (turns >= 5) {
+  if (win(base, guess)) {
+    return;
+  }
+  turns += 1;
+  makeAGuess(base, guess);
+  if (turns >= 6) {
+    setTimeout(() => {
       document.getElementById(
         "info"
       ).innerText = `Désolé.e, tu as perdu ! Le mot était : ${base}`;
-    } else {
-      makeAGuess(base, guess);
-      turns += 1;
-    }
+    }, 500); 
   }
 }
-
